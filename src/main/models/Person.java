@@ -18,6 +18,14 @@ public class Person {
         this.activities = activities;
     }
 
+    // this is required to be able to use constructor reference (see ConstructorReferenceExample)
+    public Person() {
+    }
+
+    public Person(String name) {
+        this.name = name;
+    }
+
     // all setters and getters below:
 
     // added this method to allow usig method reference
