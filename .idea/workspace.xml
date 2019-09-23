@@ -2,32 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2343e735-c921-4891-bf69-790293508b1a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/lib/apiguardian-api-1.0.0.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/junit-jupiter-5.4.2.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/junit-jupiter-api-5.4.2.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/junit-jupiter-engine-5.4.2.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/junit-jupiter-params-5.4.2.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/junit-platform-commons-1.4.2.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/junit-platform-engine-1.4.2.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/opentest4j-1.1.1.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/functionInterfaces/FunctionExample.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/functionInterfaces/FunctionPersonExample.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/functionInterfaces/FunctionExampleTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/functionInterfaces/FunctionPersonExampleTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/functionInterfaces/BiFunctionExample.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/functionInterfaces/BiFunctionExampleTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/functionInterfaces/BiFunctionTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java8_NewFeatures_CodeExamples.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Java8_NewFeatures_CodeExamples.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Java8_NewFeatures_CodeExamples/main/functionInterfaces/BiPredicateExample.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Java8_NewFeatures_CodeExamples/main/functionInterfaces/BiPredicateExample.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Java8_NewFeatures_CodeExamples/main/functionInterfaces/ConsumerExample.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Java8_NewFeatures_CodeExamples/main/functionInterfaces/ConsumerExample.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Java8_NewFeatures_CodeExamples/main/functionInterfaces/PredicateAndConsumerExample.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Java8_NewFeatures_CodeExamples/main/functionInterfaces/PredicateAndConsumerExample.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Java8_NewFeatures_CodeExamples/main/functionInterfaces/PredicatePersonExample.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Java8_NewFeatures_CodeExamples/main/functionInterfaces/PredicatePersonExample.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Java8_NewFeatures_CodeExamples/main/models/Person.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Java8_NewFeatures_CodeExamples/main/models/Person.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Java8_NewFeatures_CodeExamples/main/utilities/Utils.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/functionInterfaces/BiPredicateExample.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/functionInterfaces/BiPredicateExample.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/functionInterfaces/ConsumerExample.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/functionInterfaces/ConsumerExample.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/functionInterfaces/PredicateAndConsumerExample.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/functionInterfaces/PredicateAndConsumerExample.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/functionInterfaces/PredicatePersonExample.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/functionInterfaces/PredicatePersonExample.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/models/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/models/Person.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/utilities/CustomUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Common/utilities/CustomUtils.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -42,6 +21,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="JUnit5 Test Class" />
       </list>
     </option>
   </component>
@@ -64,6 +44,7 @@
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
     <property name="create.test.in.the.same.root" value="true" />
+    <property name="full.screen.before.presentation.mode" value="false" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -89,7 +70,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.FunctionPersonExampleTest.testPersonToGenderMapper">
+  <component name="RunManager" selected="JUnit.BiFunctionExampleTest">
     <configuration name="BiPredicateExample" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="main.functionInterfaces.BiPredicateExample" />
       <module name="Java8_NewFeatures_CodeExamples" />
@@ -103,15 +84,17 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PredicateAndConsumerExample" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="main.functionInterfaces.PredicateAndConsumerExample" />
+    <configuration name="BiFunctionExampleTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Java8_NewFeatures_CodeExamples" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="main.functionInterfaces.*" />
+          <option name="PATTERN" value="test.functionInterfaces.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <option name="PACKAGE_NAME" value="test.functionInterfaces" />
+      <option name="MAIN_CLASS_NAME" value="test.functionInterfaces.BiFunctionExampleTest" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -164,11 +147,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.BiFunctionExampleTest" />
         <item itemvalue="JUnit.FunctionPersonExampleTest.testPersonToGenderMapper" />
         <item itemvalue="JUnit.FunctionPersonExampleTest" />
         <item itemvalue="JUnit.FunctionExampleTest" />
         <item itemvalue="Application.BiPredicateExample" />
-        <item itemvalue="Application.PredicateAndConsumerExample" />
       </list>
     </recent_temporary>
   </component>
