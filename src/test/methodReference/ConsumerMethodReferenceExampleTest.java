@@ -1,13 +1,12 @@
 package test.methodReference;
 
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 class ConsumerMethodReferenceExampleTest {
 
     @Test
+    @Disabled
     final void testSimpleConsumerLambda() {
-
     }
 }

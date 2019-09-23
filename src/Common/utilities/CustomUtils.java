@@ -10,5 +10,7 @@ import java.util.List;
  * Contains all static methods and final static fields to be accessed elsewhere
  */
 public class CustomUtils {
-    final static public List<Person> PERSON_LIST = PersonDatabase.getPersonList();
+    public static final List<Person> PERSON_LIST = PersonDatabase.getPersonList();
+
+    public static final Person ONE_PERSON = PersonDatabase.personSupplier.get();
 }

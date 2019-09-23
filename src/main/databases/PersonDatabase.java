@@ -5,11 +5,18 @@ import main.models.PersonGender;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.function.Supplier;
 
 /**
  * Creates new instances of Person class
  */
 public class PersonDatabase {
+
+    /**
+     * a supplier that returns one Person entry
+     */
+    public static final Supplier<Person> personSupplier = () ->
+            new Person("John", 13, 20.5, PersonGender.MALE.label, Arrays.asList("soccer", "lacross", "rugby"));
 
     public static List<Person> getPersonList() {
         Person person1 = new Person("John", 13, 20.5, PersonGender.MALE.label, Arrays.asList("soccer", "lacross", "rugby"));
