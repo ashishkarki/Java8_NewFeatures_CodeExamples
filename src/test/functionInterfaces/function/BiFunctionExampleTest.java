@@ -1,8 +1,8 @@
-package test.functionInterfaces;
+package test.functionInterfaces.function;
 
 import Common.utilities.CustomUtils;
-import main.functionInterfaces.BiFunctionExample;
-import main.functionInterfaces.PredicatePersonExample;
+import main.functionInterfaces.function.BiFunctionExample;
+import main.functionInterfaces.predicate.PredicatePersonExample;
 import org.junit.jupiter.api.Test;
 
 import java.util.HashMap;

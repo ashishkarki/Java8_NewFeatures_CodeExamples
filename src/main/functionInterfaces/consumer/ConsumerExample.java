@@ -1,4 +1,4 @@
-package main.functionInterfaces;
+package main.functionInterfaces.consumer;
 
 import Common.utilities.CustomUtils;
 import main.models.Person;

@@ -1,4 +1,4 @@
-package main.functionInterfaces;
+package main.functionInterfaces.consumer;
 
 import main.databases.PersonDatabase;
 import main.models.Person;

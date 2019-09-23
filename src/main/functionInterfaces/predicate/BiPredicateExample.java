@@ -1,4 +1,4 @@
-package main.functionInterfaces;
+package main.functionInterfaces.predicate;
 
 import Common.utilities.CustomUtils;
 import main.models.Person;
@@ -9,10 +9,10 @@ import java.util.function.BiPredicate;
 
 public class BiPredicateExample {
 
-    final static BiPredicate<Integer, Double> ageWeightBiPredicate =
+    public final static BiPredicate<Integer, Double> ageWeightBiPredicate =
             (age, weight) -> age > 20 && weight >= 50.0;
     // and just for the sake of printing, we create a biConsumer
-    final static BiConsumer<String, List<String>> printerBiConsumer =
+    public final static BiConsumer<String, List<String>> printerBiConsumer =
             (name, activities) -> System.out.println("This person name: " + name + " is busy with " + activities);
 
     public static void filterBasedOnAgeAndWeight(List<Person> people) {

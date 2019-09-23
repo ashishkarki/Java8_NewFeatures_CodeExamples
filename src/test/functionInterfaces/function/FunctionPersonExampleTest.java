@@ -1,8 +1,8 @@
-package test.functionInterfaces;
+package test.functionInterfaces.function;
 
 import Common.utilities.CustomUtils;
 import jdk.jfr.Description;
-import main.functionInterfaces.FunctionPersonExample;
+import main.functionInterfaces.function.FunctionPersonExample;
 import org.junit.jupiter.api.Test;
 
 import java.util.HashMap;

@@ -1,4 +1,4 @@
-package main.functionInterfaces;
+package main.functionInterfaces.function;
 
 import main.models.Person;
 

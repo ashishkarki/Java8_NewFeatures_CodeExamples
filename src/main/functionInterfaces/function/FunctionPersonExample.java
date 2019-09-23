@@ -1,5 +1,6 @@
-package main.functionInterfaces;
+package main.functionInterfaces.function;
 
+import main.functionInterfaces.predicate.BiPredicateExample;
 import main.models.Person;
 
 import java.util.HashMap;

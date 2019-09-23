@@ -1,7 +1,7 @@
-package test.functionInterfaces;
+package test.functionInterfaces.function;
 
 import jdk.jfr.Description;
-import main.functionInterfaces.FunctionExample;
+import main.functionInterfaces.function.FunctionExample;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
