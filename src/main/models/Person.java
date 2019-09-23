@@ -20,6 +20,11 @@ public class Person {
 
     // all setters and getters below:
 
+    // added this method to allow usig method reference
+    public void printListOfActivities() {
+        System.out.println(activities);
+    }
+
     @Override
     public String toString() {
         return "Person{" +
