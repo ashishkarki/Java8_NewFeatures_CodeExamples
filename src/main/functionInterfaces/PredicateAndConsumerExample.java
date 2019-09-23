@@ -1,7 +1,7 @@
 package main.functionInterfaces;
 
-import main.databases.PersonDatabase;
 import main.models.Person;
+import main.utilities.CustomUtils;
 
 import java.util.List;
 import java.util.function.BiConsumer;
@@ -24,8 +24,6 @@ public class PredicateAndConsumerExample {
     }
 
     public static void main(String[] args) {
-        final List<Person> personList = PersonDatabase.getPersonList();
-
-        printPersonAndActivities(personList);
+        printPersonAndActivities(CustomUtils.PERSON_LIST);
     }
 }

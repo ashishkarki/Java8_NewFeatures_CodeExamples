@@ -2,6 +2,7 @@ package main.functionInterfaces;
 
 import main.databases.PersonDatabase;
 import main.models.Person;
+import main.utilities.CustomUtils;
 
 import java.util.List;
 import java.util.function.Consumer;
@@ -9,7 +10,7 @@ import java.util.stream.Collectors;
 
 public class ConsumerExample {
 
-    static List<Person> personList = PersonDatabase.getPersonList();
+    static List<Person> personList = CustomUtils.PERSON_LIST;
     static Consumer<Person> consumer = person -> System.out.println(person);
     static Consumer<Person> nameConsumer = person -> System.out.print(person.getName() + " is active in : ");
     static Consumer<Person> activitiesConsumer = person -> System.out.println(person.getActivities());

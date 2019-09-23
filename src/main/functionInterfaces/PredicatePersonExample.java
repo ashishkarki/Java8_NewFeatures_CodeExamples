@@ -2,6 +2,7 @@ package main.functionInterfaces;
 
 import main.databases.PersonDatabase;
 import main.models.Person;
+import main.utilities.CustomUtils;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -11,7 +12,7 @@ public class PredicatePersonExample {
 
     final static Predicate<Person> agePredicate = person -> person.getAge() > 20;
     final static Predicate<Person> weightPredicate = person -> person.getWeight() > 50;
-    final static List<Person> personList = PersonDatabase.getPersonList();
+    final static List<Person> personList = CustomUtils.PERSON_LIST;
 
     public static List<Person> filterPersonByAge() {
         List<Person> agedPersonList = new ArrayList<>();
