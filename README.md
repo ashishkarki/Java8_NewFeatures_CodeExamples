@@ -27,12 +27,17 @@ What are Functional Interfaces?
 - They are denoted by an optional annotation @FunctionalInterface. It is considered a good practice to use the annotation to indicate that certain interface is supposed to be functional.
 - There are four new functional interfaces in Java8:
   1. Consumer: represents an operation that accepts one argument and returns no result
-  2. Predicate
-  3. Function
+  2. Predicate: represents a boolean-valued function (also called predicate) of one argument and returns a boolean true/false result
+  3. Function: represents a function which accepts one argument and produces a result. The idea behind this is to be able to assign and pass around functions like we do any variables.
   4. Supplier
 - All these above interfaces are part of the java.util.function package.
 - Each of the above interfaces also have one or more extensions.
-  1. Consumer’s extension: BiConsumer which represents an operation that accepts two arguments and returns no result
+  1. Consumer’s extension: 
+	1.1 BiConsumer which represents an operation that accepts two arguments and returns no result
   2. Predicate’s extension: 
+	2.1 BiPredicate which represents a predicate which is a boolean-valued function of two arguments and which represents a boolean-value
+  3. Function’s extension:
+	3.1 BiFunction which represents a function that accepts two arguments and produces a result. Obviously, this is a two-arity specialization of Function interface.
+ 
 
 <more to be added..>

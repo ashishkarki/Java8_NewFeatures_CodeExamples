@@ -1,4 +1,4 @@
-package main.utilities;
+package Common.utilities;
 
 import main.databases.PersonDatabase;
 import main.models.Person;

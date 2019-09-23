@@ -1,8 +1,7 @@
 package main.functionInterfaces;
 
-import main.databases.PersonDatabase;
+import Common.utilities.CustomUtils;
 import main.models.Person;
-import main.utilities.CustomUtils;
 
 import java.util.List;
 import java.util.function.Consumer;
