@@ -141,4 +141,21 @@ These have existing in Java since version 1.0. Back then, these were called SAM 
 
 - Stream Terminal Operations: these operations start the whole stream pipeline and collect the resulting data.
     + some terminal operations are: forEach, collect, sum etc
+    + __collect()__ : takes a Collector type as input and produces an output based on that Collector. Some Collectors 
+    are discussed below:
+        + __joining()__ : this collector performs string concatenation on the elements of a stream. It has three overloaded methods.
+            1. First version doesn't any parameter: joining()
+            2. Second version a delimiter as a parameter: joining(delimiter)
+            2. Second version a delimiter, a prefix  and a suffix as parameters: joining(delimiter, prefix, suffix)
+        + __counting()__: this Collector returns the total number of elements as its result.
+        + __mapping()__: this collector type first applies a mapping/transformation function and collects the data into
+        a collection.
+        + __maxBy() and minBy()__: both of these collectors take a Comparator as input and return an Optional as output
+        + __summingInt() and averagingInt()__: these return the sum and average of a collection. They also have corresponding 
+        versions for long (as in summingLong()) and double (as in summingDouble()).
+        + __groupingBy()__: is equivalent to applying a groupBy clause in a SQL.Basically it is used to group elements
+        based on an input parameter. It's output is a Map<k, V> of key-value pairs. It has three versions:
+            + First version is _groupingBy(classifier)_: where classifier is the string used to group the elements
+            + Second version is _groupingBy(classifier, downstream)_: where downstream is any Collector
+            + Third version is _groupingBy(classifier, supplier, downstream)_: where supplier is any Supplier
 <more to be added..>
