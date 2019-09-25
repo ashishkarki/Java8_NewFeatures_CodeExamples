@@ -1,6 +1,7 @@
 package Common.utilities;
 
 import main.models.Person;
+import main.models.PersonGender;
 
 import java.util.Random;
 import java.util.function.Predicate;
@@ -14,6 +15,7 @@ import java.util.function.Supplier;
 public class CommonPredicatesFunctions {
     public final static Predicate<Person> agePredicate = person -> person.getAge() > 20;
     public final static Predicate<Person> weightPredicate = person -> person.getWeight() > 50;
+    public final static Predicate<Person> genderPredicate = person -> person.getGender() == PersonGender.MALE.label;
 
     public static final Supplier<Integer> randomIntSupplier = new Random()::nextInt;
 }

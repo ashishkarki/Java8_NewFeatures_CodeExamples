@@ -158,4 +158,8 @@ These have existing in Java since version 1.0. Back then, these were called SAM 
             + First version is _groupingBy(classifier)_: where classifier is the string used to group the elements
             + Second version is _groupingBy(classifier, downstream)_: where downstream is any Collector
             + Third version is _groupingBy(classifier, supplier, downstream)_: where supplier is any Supplier
+        + __partitioningBy()__: this is also a type of groupingBy and accepts a predicate as an input. Its output is always
+        a Map<K, V> where Key(K) is always of Boolean type. There are two versions:
+            + First version is _partitioningBy(predicate)_
+            + Second versio is _partitioningBy(predicate, downstream)_ : where downstream can be any collector
 <more to be added..>
