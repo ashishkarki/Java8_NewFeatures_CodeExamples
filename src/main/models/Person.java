@@ -9,6 +9,16 @@ public class Person {
     private double weight;
     private String gender;
     private List<String> activities;
+    private int siblings;
+
+    public Person(String name, int age, double weight, String gender, List<String> activities, int siblings) {
+        this.name = name;
+        this.age = age;
+        this.weight = weight;
+        this.gender = gender;
+        this.activities = activities;
+        this.siblings = siblings;
+    }
 
     public Person(String name, int age, double weight, String gender, List<String> activities) {
         this.name = name;
@@ -82,4 +92,13 @@ public class Person {
     public void setActivities(List<String> activities) {
         this.activities = activities;
     }
+
+    public int getSiblings() {
+        return siblings;
+    }
+
+    public void setSiblings(int siblings) {
+        this.siblings = siblings;
+    }
+
 }

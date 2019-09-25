@@ -1,23 +1,23 @@
 package main.functionInterfaces.predicate;
 
+import Common.utilities.CommonPredicatesFunctions;
 import Common.utilities.CustomUtils;
 import main.models.Person;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.function.Predicate;
 
 public class PredicatePersonExample {
 
-    public final static Predicate<Person> agePredicate = person -> person.getAge() > 20;
-    public final static Predicate<Person> weightPredicate = person -> person.getWeight() > 50;
+//    public final static Predicate<Person> agePredicate = person -> person.getAge() > 20;
+//    public final static Predicate<Person> weightPredicate = person -> person.getWeight() > 50;
     public final static List<Person> personList = CustomUtils.PERSON_LIST;
 
     public static List<Person> filterPersonByAge() {
         List<Person> agedPersonList = new ArrayList<>();
 
         personList.forEach(person -> {
-            if(agePredicate.test(person)) {
+            if(CommonPredicatesFunctions.agePredicate.test(person)) {
                 agedPersonList.add(person);
             }
         });
@@ -29,7 +29,7 @@ public class PredicatePersonExample {
         List<Person> agedWeightPersonList = new ArrayList<>();
 
         personList.forEach(person -> {
-            if(agePredicate.and(weightPredicate).test(person)) {
+            if(CommonPredicatesFunctions.agePredicate.and(CommonPredicatesFunctions.weightPredicate).test(person)) {
                 agedWeightPersonList.add(person);
             }
         });

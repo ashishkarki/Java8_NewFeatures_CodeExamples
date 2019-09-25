@@ -1,13 +1,13 @@
 package test.functionInterfaces.function;
 
+import Common.utilities.CommonPredicatesFunctions;
 import Common.utilities.CustomUtils;
 import main.functionInterfaces.function.BiFunctionExample;
-import main.functionInterfaces.predicate.PredicatePersonExample;
 import org.junit.jupiter.api.Test;
 
 import java.util.HashMap;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class BiFunctionExampleTest {
 
@@ -21,7 +21,7 @@ class BiFunctionExampleTest {
 
         var actualMap = BiFunctionExample.personToGenderMapper2.apply(
                 CustomUtils.PERSON_LIST,
-                PredicatePersonExample.agePredicate);
+                CommonPredicatesFunctions.agePredicate);
 
         assertEquals(expectedMap, actualMap);
     }
@@ -36,7 +36,7 @@ class BiFunctionExampleTest {
 
         var actualMap = BiFunctionExample.personToGenderMapper2.apply(
                 CustomUtils.PERSON_LIST,
-                PredicatePersonExample.weightPredicate);
+                CommonPredicatesFunctions.weightPredicate);
 
         assertEquals(expectedMap, actualMap);
     }

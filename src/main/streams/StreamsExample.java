@@ -1,7 +1,7 @@
 package main.streams;
 
+import Common.utilities.CommonPredicatesFunctions;
 import Common.utilities.CustomUtils;
-import main.functionInterfaces.predicate.PredicatePersonExample;
 import main.models.Person;
 
 import java.util.stream.Collectors;
@@ -16,8 +16,8 @@ public class StreamsExample {
 
         var personNameActMapWithAgeWeightFilter = CustomUtils.PERSON_LIST
                 .stream()
-                .filter(PredicatePersonExample.agePredicate)
-                .filter(PredicatePersonExample.weightPredicate)
+                .filter(CommonPredicatesFunctions.agePredicate)
+                .filter(CommonPredicatesFunctions.weightPredicate)
                 .collect(Collectors.toMap(Person::getName, Person::getActivities));
 
         System.out.println("Person Name Activities: " + personNameActivitiesMap.size());
