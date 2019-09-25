@@ -114,6 +114,16 @@ These have existing in Java since version 1.0. Back then, these were called SAM 
     + __findFirst() and findAny()__: both of these are used to find an element in the stream. They return a result type of Optional, meaning they with either return the element they find or null if they don’t. The difference between these two becomes evident when using parallelStreams (To be discussed a bit later).
         + __findFirst()__: returns the first element it finds per the condition. It stops after it finds the first element that satisfies the condition or predicate.
         + __findAny()__: returns the first encountered element in the stream. It stops immediately after finding any first element it encounters, it doesn’t take or bother itself with any conditions or predicates.
-
+    + __Stream API Factory methods: Of(), generate(), iterate()__ : these methods are used to create new streams.
+    	+ __Of()__: this method creates a stream based on the values passed to it. For example: 
+        	```Stream<String> myStream = Stream.Of("John", "Jenny", "Robin");```
+        + __generate()__: used to create an infinite stream. Usage like so
+        	``` Stream.generate(<Some-Supplier>) ```
+        + __iterate()__: also used to create an infinite stream.Usage like so:
+        	``` Stream.iterate(1, x -> x * 2) ```
+    + Numeric Streams in Java: these represent the __primitive values__ in a Stream. They are of three types: IntStream, LongStream and DoubleStream.
+- Short Circuiting operations 
+    + The idea behind short circuiting is that once the specified condition is met, the remaining chunk of stream or data isn't processed.
+    + Streams API has few short circuit operations that we have discussed so far. They are: limit, findFirst, findAny, anyMatch, allMatch() and noneMatch.
 
 <more to be added..>
