@@ -121,9 +121,24 @@ These have existing in Java since version 1.0. Back then, these were called SAM 
         	``` Stream.generate(<Some-Supplier>) ```
         + __iterate()__: also used to create an infinite stream.Usage like so:
         	``` Stream.iterate(1, x -> x * 2) ```
-    + Numeric Streams in Java: these represent the __primitive values__ in a Stream. They are of three types: IntStream, LongStream and DoubleStream.
+
 - Short Circuiting operations 
     + The idea behind short circuiting is that once the specified condition is met, the remaining chunk of stream or data isn't processed.
     + Streams API has few short circuit operations that we have discussed so far. They are: limit, findFirst, findAny, anyMatch, allMatch() and noneMatch.
 
+- __Numeric Streams__ in Java: these represent the __primitive values__ in a Stream. They are of three types: IntStream, LongStream and DoubleStream.
+    + Numeric stream ranges: The three streams support these types of range operations:
+        + __IntStream__ : supports range() and rangeClosed()
+        + __LongStream__ : supports range() and rangeClosed()
+        + __IntStream__ : Doesn't support range() and rangeClosed(). One workaround this is to do something like
+                ``` IntStream.range(a, b).asDoubleStream().forEach(...) ```
+    + __range(), rangeClosed(), count(), forEach()__ : as obvious, these are used to create or loop through a range of numbers.
+    + Numeric stream aggregate functions are:  __sum(), min(), max(), average()__
+    + Numeric stream __Boxing and Unboxing__: conversion from primitive to Wrapper class and vice-versa
+        + __Boxing()__: converting a primitive type to its Wrapper class Type. For eg: converting int to Integer.
+        + __Unboxing()__: converting a Wrapper class Type to primitive type. For eg: converting Integer to int.
+    + Numeric stream map methods: __mapToObj(), mapToLong(), mapToDouble()__
+
+- Stream Terminal Operations: these operations start the whole stream pipeline and collect the resulting data.
+    + some terminal operations are: forEach, collect, sum etc
 <more to be added..>
