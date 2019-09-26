@@ -197,4 +197,19 @@ These have existing in Java since version 1.0. Back then, these were called SAM 
         + __filter()__: similar to stream filter, performs a filtration based on some predicate
         + __map()__: similar to stream map, converts/transforms one type to another type
         + __flatMap()__: similar to stream flatMap, converts/transforms one type to another type using a flat structure.
+
+- Defaults and static methods in Java8 and beyond
+    + Prior to Java 8, Interfaces were only allowed to contain abstract methods (without implementation). This made is
+    difficult for extending interfaces with new functionalities since adding any new method would break the implementating 
+    interfaces and classes. 
+    + So, Java8 brought forward the concept of default and static methods.
+    + What are default methods?
+        + Default methods are non-abstract (with implementation or method body) in an interface. Default methods are 
+        identified by the keyword 'default' in front of such methods.
+        + An example is the built-in 'sort' methods with List interface. Prior to Java8, we have to use sort() from Collections
+        interface (a parent of List) to do any kind of sorting.
+        + Importantly, default methods can be overridden in the implementing classes.
+    +  What are static methods?
+        + Static methods are similar to default methods with the exception that they cannot be overriden by implementing 
+        classes.  
 <more to be added..>
