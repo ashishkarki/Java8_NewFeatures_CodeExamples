@@ -217,4 +217,10 @@ These have existing in Java since version 1.0. Back then, these were called SAM 
     + One is that instance variables are allowed in abstract classes but disallowed in Interfaces.
     + Other is a class an extend only one (abstract) class but can implement multiple interfaces.
     + Essentially, __after Java8, multiple inheritance is allowed__
+    + Resolving precedence during multiple inheritance done using multiple interfaces. Remember:
+        + The highest precedence is given to the class that implements any interface
+        + The second highest precedence goes to the sub-interface that implements an interface
+        + Another thing to note is if an implementation class say ImplAB implements Interfaces A and B both of which have 
+        exactly same signature default methods, then Java gives error. The only way to fix this would be implement the 
+        conflicting method in the ImplAB implementation class.
 <more to be added..>
