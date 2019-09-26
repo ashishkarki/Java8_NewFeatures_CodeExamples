@@ -223,4 +223,30 @@ These have existing in Java since version 1.0. Back then, these were called SAM 
         + Another thing to note is if an implementation class say ImplAB implements Interfaces A and B both of which have 
         exactly same signature default methods, then Java gives error. The only way to fix this would be implement the 
         conflicting method in the ImplAB implementation class.
+
+- New Date and Time libraries in Java8
+    + The new libraries are __LocalDate, LocalTime and LocalDateTime__.
+    + All of these are part of the java.time package.
+    + All these libraries are Immutable and help promote functional way of programming.
+    + __Period__ class: represents a time in Days, Months and Years based on date-representation.
+        + Period class is also part of the java.time package.
+        + Period is compatible with LocalDate.
+        + More importantly, this class represents a __Period or stretch of Time__ and not a specific date and time. Eg:
+            ``` Period p1 = Period.ofDays(10); ``` // represents a period of 10 days
+            ``` Period p2 = Period.ofYears(10); ``` // represents a period of 10 years
+        + Following are some use cases of Period class:
+            + More general use is to calculate the difference between two dates. Eg:
+                ``` Period pDiff = Period.between(localDate1, localDate2); ```
+    + __Duration__ class: this class is a time based representation of time in __hours, minutes, seconds and nanoseconds__
+        + Duration is compatible with LocalTime and LocalDateTime.
+        + Duration represents a duration of time and not just a specific time. For eg:
+            ``` Duration d1 = Duration.ofHours(3); ``` // represents a duration of 3 hours
+        + Most general use case of Duration is to calculate the difference between the time based objects like LocalTime
+        and LocalDateTime. eg:
+            ``` var duration = Duration.between(localTime1, localTime2); ```
+    + __Instant__ class: this class represents time in a machine readable format (in huge number format). eg:
+        ``` var instant = Instant.now() ``` // where the instant represents the time in seconds from Jan 01, 1970 (Epoch)
+                                    to the current time
+                                    
+    
 <more to be added..>
