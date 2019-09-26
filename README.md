@@ -247,6 +247,17 @@ These have existing in Java since version 1.0. Back then, these were called SAM 
     + __Instant__ class: this class represents time in a machine readable format (in huge number format). eg:
         ``` var instant = Instant.now() ``` // where the instant represents the time in seconds from Jan 01, 1970 (Epoch)
                                     to the current time
-                                    
+    + __Time Zones related libraries: ZonedDateTime, ZoneID, ZoneOffset__
+        + __ZonedDateTime__: represents the date/time along with its timezone information. eg
+            ``` 2016-08-22T14:30+08:00[Asia/Kuala_Lumpur] ```  
+        + __ZoneOffset__: is the offset from UTC time. In above example it is ```+08:00```
+        + __ZoneID__: is the unique ID for that zone. in example above, it is ``` Asia/Kuala_Lumpur ```
+        + __OffsetDateTime__: is simiar to ZonedDateTime, the only difference is offsetDateTime doesn't store the ZoneID, 
+        and only stores the date time with the zoneOffset. eg:
+            ``` 2019-09-26T20:00:39.711805200-06:00 ```     
+            
+    + __DateTimeFormatter__: is part of the java.time.format package.It is used to format and parse LocalDate/Time/DateTime.
+        + _What is parsing?_ : converting a string to LocalDate/Time/DateTime.
+        + _What is formatting?_: converting LocalDate/Time/DateTime to a String.                                
     
 <more to be added..>
