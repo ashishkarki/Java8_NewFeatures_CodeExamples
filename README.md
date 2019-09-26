@@ -212,4 +212,9 @@ These have existing in Java since version 1.0. Back then, these were called SAM 
     +  What are static methods?
         + Static methods are similar to default methods with the exception that they cannot be overriden by implementing 
         classes.  
+
+- Differences between Abstract Classes and Interfaces in Java8::
+    + One is that instance variables are allowed in abstract classes but disallowed in Interfaces.
+    + Other is a class an extend only one (abstract) class but can implement multiple interfaces.
+    + Essentially, __after Java8, multiple inheritance is allowed__
 <more to be added..>
