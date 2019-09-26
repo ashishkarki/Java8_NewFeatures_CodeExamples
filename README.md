@@ -162,4 +162,22 @@ These have existing in Java since version 1.0. Back then, these were called SAM 
         a Map<K, V> where Key(K) is always of Boolean type. There are two versions:
             + First version is _partitioningBy(predicate)_
             + Second versio is _partitioningBy(predicate, downstream)_ : where downstream can be any collector
+
+- What are Parallel Streams ?
+    + Basically, a parallel stream splits the source of data into multiple parts, works on them in parallel and finally 
+    combines the result.
+    + How does Parallel streams work ?
+        + Parallel streams use the __Fork/Join Framework__ underneath. Fork/Join were introduced in Java 7.
+        + The number of threads created = the number of processors available in the host machine
+        + Note that parallel streams might not be the best solutions in all cases. So checking to see if parallelized
+        does indeed perform better is important. 
+            + One such case when parallel stream performs poorly is the case of Unboxing
+        Wrapper types to primitive types such when calculating their sum.
+            + Another example of parallel streams being inefficient or even giving wrong results is when we have 
+            "Mutable" variables involved. In such cases, the mutable variable is accessed concurrently leading to a situation
+            where the most updated value of the output variable might be ready when a return happens giving a wrong result.
+
+- What are Optionals ?
+    + Optionals are containers used to represent non-null objects.It is used to represent a null with an absent value.
+    + Optionals help avoid Null Pointer Exception and Unnecessary null checks.
 <more to be added..>
