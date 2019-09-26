@@ -193,5 +193,8 @@ These have existing in Java since version 1.0. Back then, these were called SAM 
         back to the caller 
         + __isPresent()__: checks if an Optional object has a non-null value or not.
         + __ifPresent()__: same as isPresent() checks if an optional object has value. Additionally, takes a Consumer as
-        its argument and allow you to perform some consumer operation with it like printing or calling another method. 
+        its argument and allow you to perform some consumer operation with it like printing or calling another method.
+        + __filter()__: similar to stream filter, performs a filtration based on some predicate
+        + __map()__: similar to stream map, converts/transforms one type to another type
+        + __flatMap()__: similar to stream flatMap, converts/transforms one type to another type using a flat structure.
 <more to be added..>

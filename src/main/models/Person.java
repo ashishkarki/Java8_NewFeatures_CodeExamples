@@ -1,6 +1,7 @@
 package main.models;
 
 import java.util.List;
+import java.util.Optional;
 
 public class Person {
 
@@ -10,6 +11,7 @@ public class Person {
     private String gender;
     private List<String> activities;
     private int siblings;
+    private Optional<Car> car = Optional.empty(); //not every person has car so it's optional
 
     public Person(String name, int age, double weight, String gender, List<String> activities, int siblings) {
         this.name = name;
@@ -50,6 +52,9 @@ public class Person {
                 ", age=" + age +
                 ", weight=" + weight +
                 ", gender='" + gender + '\'' +
+                ", activities=" + activities +
+                ", siblings=" + siblings +
+                ", car=" + car +
                 '}';
     }
 
@@ -101,4 +106,11 @@ public class Person {
         this.siblings = siblings;
     }
 
+    public Optional<Car> getCar() {
+        return car;
+    }
+
+    public void setCar(Optional<Car> car) {
+        this.car = car;
+    }
 }

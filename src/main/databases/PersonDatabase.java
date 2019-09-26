@@ -1,10 +1,12 @@
 package main.databases;
 
+import main.models.Car;
 import main.models.Person;
 import main.models.PersonGender;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.Optional;
 import java.util.function.Supplier;
 
 /**
@@ -15,8 +17,14 @@ public class PersonDatabase {
     /**
      * a supplier that returns one Person entry
      */
-    public static final Supplier<Person> personSupplier = () ->
-            new Person("John", 13, 20.5, PersonGender.MALE.label, Arrays.asList("soccer", "lacross", "rugby"), 5);
+    public static final Supplier<Person> personSupplier = () -> {
+        var person = new Person("John", 23, 20.5, PersonGender.MALE.label,
+                Arrays.asList("soccer", "lacross", "rugby"), 5);
+        var car = new Car("Honda", "Accord");
+        person.setCar(Optional.ofNullable(car));
+
+        return person;
+    };
 
     public static List<Person> getPersonList() {
         Person person1 = new Person("John", 13, 20.5, PersonGender.MALE.label, Arrays.asList("soccer", "lacross", "rugby"), 2);
