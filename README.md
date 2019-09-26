@@ -180,4 +180,18 @@ These have existing in Java since version 1.0. Back then, these were called SAM 
 - What are Optionals ?
     + Optionals are containers used to represent non-null objects.It is used to represent a null with an absent value.
     + Optionals help avoid Null Pointer Exception and Unnecessary null checks.
+    + Some optionals methods are discussed below:
+        + __ofNullable()__: use ofNullable if you have doubts that the argument might be null
+        + __of()__: use of if you are certain that the argument will never be null. Sending a null as argument to Of(), 
+        gives you NullPointerException.
+        + __empty()__: use or return Optional.empty() when there is a null object and you want to still return an Optional 
+        type object
+        + __orElse()__: to return a default/custom value in cases where an operation returns a null
+        + __orElseGet()__: same as orElse (to return a default/custom value in cases where an operation returns a null),
+        but, it takes a Supplier as input rather than any object.
+        + __orElseThrow()__: similar to orElseGet, it requires a supplier as argument; in case of a null value throws an exception
+        back to the caller 
+        + __isPresent()__: checks if an Optional object has a non-null value or not.
+        + __ifPresent()__: same as isPresent() checks if an optional object has value. Additionally, takes a Consumer as
+        its argument and allow you to perform some consumer operation with it like printing or calling another method. 
 <more to be added..>

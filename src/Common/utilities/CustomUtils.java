@@ -20,6 +20,10 @@ public class CustomUtils {
 
     public static final Person ONE_PERSON = PersonDatabase.personSupplier.get();
 
+    public static Optional<Person> personOptionalNotNull = Optional.ofNullable(ONE_PERSON);
+    public static Optional<Person> personOptionalNull = Optional.ofNullable(null);
+    public static final String someString = "Some String";
+
     static final Supplier<List<String>> personNamesSupplier = () -> {
         return PERSON_LIST.stream().map(Person::getName).collect(Collectors.toList());
     };
